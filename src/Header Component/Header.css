@@ -1,0 +1,15 @@
+#logo {
+	height: 5vh;
+}
+
+.button {
+	background-color: #f8f8f8;
+	color: red;
+	border-color: #f8f8f8;
+}
+
+.button:hover, .button:focus, .button:active {
+	background-color: red;
+	color: white;
+	border-color: #f8f8f8;
+}
