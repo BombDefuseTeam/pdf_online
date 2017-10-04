@@ -15,7 +15,7 @@ const Slider = () => {
                                     {
                                         page.map(pic => {
                                             return (
-                                                <Col xs={6} md={4}>
+                                                <Col xs={4} md={4} sm={4} xs={4}>
                                                     <a href={pic.link}>
                                                         <img className='pic' alt="900x500" src={pic.src} />
                                                     </a>
