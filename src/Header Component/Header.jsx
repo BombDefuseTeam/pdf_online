@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button, Grid, Row, Col } from 'react-bootstrap';
 import './Header.css';
 import logo from './pics/logo.png';
+import { SearchBox } from '../SearchBox';
 
 const Header = ({
     rw,
@@ -9,63 +10,76 @@ const Header = ({
 }) => {
     const bg = 'white', txt = 'red';
     return (
-        <Navbar fixedTop>
-            <Nav>
-                <NavItem>
-                    <a href="#">
-                        <img id='logo' src={logo} alt='logo' />
-                    </a>
-                </NavItem>
-            </Nav>
-            <Nav>
-                <NavItem className='button-box'>
-                    <Button
-                        id='button1'
-                        href='#'
-                        onMouseEnter={() => rw('button1')}
-                        onMouseLeave={() => wr('button1')}
-                        onMouseDown={() => rw('button1', 1)}
-                        onMouseUp={() => rw('button1')}
-                        style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
-                    >
-                        Button1
-                    </Button>
-                </NavItem>
-                <NavItem className='button-box'>
-                    <Button
-                        id='button2'
-                        href='#'
-                        onMouseEnter={() => rw('button2')}
-                        onMouseLeave={() => wr('button2')}
-                        onMouseDown={() => rw('button2', 1)}
-                        onMouseUp={() => rw('button2')}
-                        style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
-                    >
-                        Button2
-                    </Button>
-                </NavItem>
-            </Nav>
-            <Nav pullRight>
-                <NavItem>
-                    <Button
-                        id='login'
-                        href='#'
-                        onMouseEnter={() => rw('login')}
-                        onMouseLeave={() => wr('login')}
-                        onMouseDown={() => rw('login', 1)}
-                        onMouseUp={() => rw('login')}
-                        style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
-                    >
-                        Login
-                    </Button>
-                </NavItem>
-            </Nav>
+        <Navbar id="navbar" fixedTop collapseOnSelect >
+            <Grid>
+                <Row>
+                    <Col md={1}>
+                        <Navbar.Header>
+                            <Nav>
+                                <a href="#" id='logo-link'>
+                                    <img id='logo' src={logo} alt='logo' />
+                                </a>
+                                <Navbar.Toggle />
+                            </Nav>
+                        </Navbar.Header>
+                    </Col>
+
+                    <Navbar.Collapse>
+                        <Col md={6}>
+                            <Nav>
+                                {
+                                    Array(4).fill(null).map((btn, idx) => {
+                                        return (
+                                            <Button
+                                                key={idx}
+                                                id={`button${idx}`}
+                                                href='#'
+                                                onMouseEnter={() => rw(`button${idx}`)}
+                                                onMouseLeave={() => wr(`button${idx}`)}
+                                                onMouseDown={() => rw(`button${idx}`, 1)}
+                                                onMouseUp={() => rw(`button${idx}`)}
+                                                style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
+                                            >
+                                                Button{idx}
+                                            </Button>
+                                        )
+                                    })
+                                }
+                            </Nav>
+                        </Col>
+                        <Col md={4}>
+                            <Nav>
+                                <SearchBox></SearchBox>
+                            </Nav>
+                        </Col>
+                        <Col md={1}>
+                            <Nav>
+                                <Button
+                                    id='login'
+                                    href='#'
+                                    onMouseEnter={() => rw('login')}
+                                    onMouseLeave={() => wr('login')}
+                                    onMouseDown={() => rw('login', 1)}
+                                    onMouseUp={() => rw('login')}
+                                    style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
+                                >
+                                    Login
+                                </Button>
+                            </Nav>
+                        </Col>
+                    </Navbar.Collapse>
+                </Row>
+            </Grid>
         </Navbar>
     );
 };
 
 const control = WrappedComponent =>
     class extends Component {
+        constructor(props) {
+            super(props);
+        }
+
         rw = (id, border = null) => {
             document.getElementById(id).style.backgroundColor = 'red';
             document.getElementById(id).style.color = 'white';
