@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { SearchResult } from './SearchResult';
-import { SearchBox } from './SearchBox';
-import { Comment } from './Comment';
-import { PDF } from './PDF';
+import { SearchResult } from './Components/SearchResult';
+import { SearchBox } from './Components/SearchBox';
+import { Comment } from './Components/Comment';
+import { PDF } from './Components/PDF';
 import { Main } from './Main.jsx';
-import { Slider } from './Slider Component';
-import { ControlledHeader } from './Header Component';
+import { Slider } from './Components/Slider Component';
+import { ControlledHeader } from './Components/Header Component';
 
-import { SmartItemComponent } from './itemComponent/itemComponent';
-import { SmartListItemComponent } from './listItemComponent/listItemComponent';
+import { SmartItemComponent } from './Components/itemComponent/itemComponent';
+import { SmartListItemComponent } from './Components/listItemComponent/listItemComponent';
 import { Button } from 'react-bootstrap';
 import logo from './logo.svg';
 
