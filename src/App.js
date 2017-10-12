@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
 import { SearchResult } from './SearchResult';
 import { SearchBox } from './SearchBox';
 import { Comment } from './Comment';
 import { PDF } from './PDF';
 import { Main } from './Main.jsx';
-// import { MyPDFViewer } from './MyPDFViewer.jsx';
+import { Slider } from './Slider Component';
+import { ControlledHeader } from './Header Component';
 
 class App extends Component {
     render() {
@@ -34,7 +35,5 @@ class App extends Component {
                 </div>
             </div>
         );
-    }
-}
 
 export default App;

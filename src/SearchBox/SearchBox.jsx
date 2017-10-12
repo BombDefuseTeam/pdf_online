@@ -2,6 +2,7 @@ import _ from 'lodash';
 import faker from 'faker';
 import React, { Component } from 'react';
 import { Search, Grid, Header } from 'semantic-ui-react';
+
 import './SearchBox.css';
 
 const source = _.times(5, () => ({
@@ -50,12 +51,6 @@ export class SearchBox extends Component {
                         value={value}
                         {...this.props}
                     />
-                </Grid.Column>
-                <Grid.Column width={8}>
-                    <Header>State</Header>
-                    <pre>{JSON.stringify(this.state, null, 2)}</pre>
-                    <Header>Options</Header>
-                    <pre>{JSON.stringify(source, null, 2)}</pre>
                 </Grid.Column>
             </Grid>
         )
