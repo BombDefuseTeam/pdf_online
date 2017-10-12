@@ -33,6 +33,7 @@ export default class App extends Component {
                         <li><a href="/pdf">PDF</a></li>
                     </ul>
                     <br />
+                    <SmartListItemComponent />
                 </div>
 
                 <div style={{ marginLeft: '100px' }}>
