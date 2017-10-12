@@ -19,13 +19,7 @@ export default class App extends Component {
         return (
             <div>
                 <div className="App">
-                    <div className="App-header">
-                        <img src={logo} className="App-logo" alt="logo" />
-                        <h2>Welcome to React</h2>
-                    </div>
-                    <p className="App-intro">
-                        To get started, edit <code>src/App.js</code> and save to reload.
-                    </p>
+
                     <ul>
                         <li><a href="/searchbox">Search Box</a></li>
                         <li><a href="/searchresult">Search Result</a></li>
@@ -33,7 +27,9 @@ export default class App extends Component {
                         <li><a href="/pdf">PDF</a></li>
                     </ul>
                     <br />
-                    <SmartListItemComponent />
+                    <div className='listItem'>
+                        <SmartListItemComponent />
+                    </div>
                 </div>
 
                 <div style={{ marginLeft: '100px' }}>
