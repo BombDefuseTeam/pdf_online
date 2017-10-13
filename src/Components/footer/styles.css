@@ -1,0 +1,180 @@
+/*-----------------------------------------------------------------------------------------
+	Style chung
+-----------------------------------------------------------------------------------------*/
+
+body {
+	background:#ededed;
+	font-family: 'Roboto', sans-serif;
+}
+
+.clear {
+	clear:both;
+}
+
+img {
+  border: 0 none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+::-webkit-input-placeholder {
+   padding-left:10px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   padding-left:10px;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   padding-left:10px;  
+}
+
+:-ms-input-placeholder {
+	padding-left:10px; 
+}
+
+ol, ul {
+  list-style: none outside none;
+}
+
+a:hover, a:focus {
+	text-decoration:none !important;
+	color:#0795df;
+}
+
+img, a, input, textarea {
+  outline: 0 none;
+}
+
+.student_wp {
+	padding-right:10px;
+}
+
+.navbar-nav > li > a {
+	padding-top:10px;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------
+	Footer
+-----------------------------------------------------------------------------------------*/
+
+.social-list-block {
+  float: right;
+  width: 200px;
+}
+
+.social-list-block ul {
+  float: right;
+  width: auto;
+}
+
+.social-list-block li {
+  float: left;
+  padding-right: 5px;
+  padding-top:7px;
+}
+
+.social-list-block a {
+  background: url("images/socail-icons.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+  display: block;
+  font-size: 0;
+  height: 27px;
+  width: 28px;
+}
+
+.social-list-block a.facebook {
+    background-position: 0 0;
+}
+.social-list-block a.facebook:hover{
+    background-position: 0 -34px;    
+}
+.social-list-block a.pintrest {
+    background-position: -30px 0;
+}
+.social-list-block a.pintrest:hover {
+    background-position: -30px -34px;
+}
+.social-list-block a.google {
+    background-position: -63px 0;
+}
+.social-list-block a.google:hover {
+    background-position: -63px -34px;
+}
+.social-list-block a.twitter {
+    background-position: -94px 0;
+}
+.social-list-block a.twitter:hover {
+    background-position: -94px -34px;
+}
+.social-list-block a.linkedin {
+    background-position: -127px 0;
+}
+.social-list-block a.linkedin:hover {
+    background-position: -127px -34px;
+}
+
+.footer_wapper {
+	height:44px;
+	line-height:44px;
+	background:#0795df;
+	margin-top:40px;
+}
+
+.copyright {
+	color:#fff;
+}
+
+.footer_wapper ul {
+	margin:0px;
+	margin-left:0px;
+	padding-left:0px;
+}
+
+.small_font h3 {
+	font-size:24px;
+	padding-top:10px;
+	margin-bottom:0px;
+	margin-top:0px;
+}
+
+.selectbox-item-block h3 {
+	margin-bottom:0px;
+	margin-top:0px;
+}
+
+.submenu {
+	background:#999;
+	margin-top:10px !important;
+	padding-left:10px !important;
+	width:333px;
+	border-radius:5px 0 0 5px;
+}
+
+ul.submenu li {
+	background:none !important;
+}
+
+.submenu a:hover {
+	color:#dadd00;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.search_wapper_input {
+		width:180px !important;
+	}
+	
+	.search_wapper .button_search {
+		width:130px !important;
+	}
+	
+	.search_wapper_a {
+		width:inherit !important;
+	}
+	
+	.search_wapper {
+		padding-bottom:65px;
+	}
+}
