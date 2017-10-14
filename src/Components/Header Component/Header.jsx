@@ -20,7 +20,7 @@ const Header = ({
 }) => {
     const bg = 'white', txt = 'red';
     return (
-        <Navbar id="navbar" fixedTop collapseOnSelect >
+        <Navbar id="navbar" fixedTop collapseOnSelect fluid >
             <Grid>
                 <Row>
                     <Col md={1}>
