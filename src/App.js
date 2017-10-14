@@ -8,7 +8,7 @@ import { PDF } from './Components/PDF';
 import { Main } from './Main.jsx';
 import { Slider } from './Components/Slider Component';
 import { ControlledHeader } from './Components/Header Component';
-
+import { Footer } from './Components/Footer';
 import { SmartItemComponent } from './Components/itemComponent/itemComponent';
 import { SmartListItemComponent } from './Components/listItemComponent/listItemComponent';
 import { Button } from 'react-bootstrap';
@@ -19,10 +19,7 @@ export default class App extends Component {
         return (
             <div>
                 <ControlledHeader />
-
-                <div style={{ marginLeft: '100px' }}>
-                    <Main />
-                </div>
+                <Footer />
             </div>
         );
     }
