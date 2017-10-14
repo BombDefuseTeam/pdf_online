@@ -19,7 +19,7 @@ export default class App extends Component {
         return (
             <div>
                 <ControlledHeader />
-                <Slider />>
+                <Slider />
                 <Footer />
             </div>
         );
