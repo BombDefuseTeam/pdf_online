@@ -11,14 +11,11 @@
 	padding-top: 5px;
 }
 
-/* body {
-	height: 1000px;
-} */
-
 @media only screen and (max-width : 768px) {
 	#logo-link {
 		display: inline-block;
 		margin-top: 8px;
 		margin-bottom: 8px;
 	}
+
 }
