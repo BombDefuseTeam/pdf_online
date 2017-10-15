@@ -16,11 +16,12 @@ const handleError = (error) => {
 
 const Header = ({
     rw,
-    wr
+    wr,
+    onCollapse
 }) => {
     const bg = 'white', txt = 'red';
     return (
-        <Navbar id="navbar" fixedTop collapseOnSelect fluid >
+        <Navbar id="navbar" fixedTop collapseOnSelect fluid onToggle={() => onCollapse()}>
             <Grid>
                 <Row>
                     <Col md={1}>
@@ -123,16 +124,35 @@ const control = WrappedComponent =>
             document.getElementById(id).style.color = 'red';
         }
 
+        onCollapse = () => {
+            const navbar = document.getElementById("navbar");
+            document.body.style.paddingTop = `${navbar.clientHeight > 100 ? 96 : 234}px`;
+        }
+
         render() {
             return (
                 <WrappedComponent
                     rw={this.rw}
                     wr={this.wr}
+                    onCollapse={this.onCollapse}
                 />
             )
         }
     }
 
 const ControlledHeader = control(Header);
+
+if (matchMedia) {
+    const mq = window.matchMedia("(max-width : 768px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+}
+
+function WidthChange(mq) {
+    const navbar = document.getElementById("navbar");
+    mq.matches
+        ? (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 20}px`)) || (document.body.style.paddingTop = `96px`)
+        : (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 20}px`)) || (document.body.style.paddingTop = `70px`)
+}
 
 export { Header, ControlledHeader };

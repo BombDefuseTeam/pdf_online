@@ -3,6 +3,8 @@ import { Navbar, Nav, Grid, Row, Col } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
 import './Footer.css';
 
+document.body.style.paddingBottom = '71px';
+
 const Footer = () => {
     return (
         <Navbar id="footer">
