@@ -6,7 +6,8 @@ import { SearchBox } from '../SearchBox';
 
 const Header = ({
     rw,
-    wr
+    wr,
+    onCollapse
 }) => {
     const bg = 'white', txt = 'red';
     return (
@@ -15,7 +16,7 @@ const Header = ({
                 <Row>
                     <Col md={1}>
                         <Navbar.Header>
-                            <Nav>
+                            <Nav onClick={onCollapse}>
                                 <a href="#" id='logo-link'>
                                     <img id='logo' src={logo} alt='logo' />
                                 </a>
@@ -92,12 +93,15 @@ const control = WrappedComponent =>
             document.getElementById(id).style.backgroundColor = 'white';
             document.getElementById(id).style.color = 'red';
         }
-
+        handleCollapse = () => {
+            return alert('hello');
+        }
         render() {
             return (
                 <WrappedComponent
                     rw={this.rw}
                     wr={this.wr}
+                    onCollapse={this.handleCollapse}
                 />
             )
         }

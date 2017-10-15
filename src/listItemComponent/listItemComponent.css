@@ -1,1 +1,10 @@
-
+@media screen and (max-width: 480px){
+    .appearWhenLong{
+       display: none;
+    }
+}
+@media screen and (min-width: 480px){
+    .appearWhenShort{
+       display: none;
+    }
+}

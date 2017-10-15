@@ -17,7 +17,14 @@ import logo from './logo.svg';
 export default class App extends Component {
     render() {
         return (
-            <div>
+            <div >
+                <div className='Header' >
+                    <ControlledHeader />
+
+                </div>
+                <div>
+                    <Slider />
+                </div>
                 <div className="App">
 
                     <ul>
@@ -29,11 +36,15 @@ export default class App extends Component {
                     <br />
                     <div className='listItem'>
                         <SmartListItemComponent />
+                        <SmartListItemComponent />
+                        <SmartListItemComponent />
+                        <SmartListItemComponent />
+                        <SmartListItemComponent />
                     </div>
                 </div>
 
                 <div style={{ marginLeft: '100px' }}>
-                    <Main />
+                    {/* <Main /> */}
                 </div>
             </div>
         );

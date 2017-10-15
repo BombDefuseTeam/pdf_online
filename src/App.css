@@ -25,7 +25,17 @@
 
 .listItem{
   
-  width:90%;
+  width:100%;
+  padding-right: 100px;
+  
   align-content: center;
   text-align: center;
+}
+@media screen and (max-width: 484px) {
+  .listItem{
+  padding-right: 0px;
+  }
+}
+.Header{
+  margin-bottom: 60px;
 }
