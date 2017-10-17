@@ -12,7 +12,7 @@ import { Footer } from './Components/footer/Footer';
 import { SmartItemComponent } from './Components/itemComponent/itemComponent';
 import { SmartListItemComponent } from './Components/listItemComponent/listItemComponent';
 import { Button } from 'react-bootstrap';
-import logo from './logo.svg';
+
 
 export default class App extends Component {
     render() {
@@ -21,17 +21,11 @@ export default class App extends Component {
                 <div className='Header' >
                     <ControlledHeader />
                 </div>
-                <div>
+                <div className='Slider'>
                     <Slider />
                 </div>
                 <div className="App">
-                    {/* <ul>
-                        <li><a href="/searchbox">Search Box</a></li>
-                        <li><a href="/searchresult">Search Result</a></li>
-                        <li><a href="/comment">Comment</a></li>
-                        <li><a href="/pdf">PDF</a></li>
-                    </ul>
-                    <br /> */}
+
                     <div className='listItem'>
                         <SmartListItemComponent category={'Top rate'} />
                         <SmartListItemComponent category={'Top rate1'} />

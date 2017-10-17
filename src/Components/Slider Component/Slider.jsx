@@ -10,7 +10,7 @@ const Slider = () => {
                 list.map(item => {
                     return (
                         <Carousel.Item>
-                            <Grid>
+                            {/* <Grid>
                                 <Row className="show-grid">
                                     <Col xs={12} md={12} sm={12} xs={12}>
                                         <a href={item.link}>
@@ -18,7 +18,10 @@ const Slider = () => {
                                         </a>
                                     </Col>
                                 </Row>
-                            </Grid>
+                            </Grid> */}
+                            <a href={item.link}>
+                                <img className='pic' alt="img" src={item.src} />
+                            </a>
                         </Carousel.Item>
                     );
                 })

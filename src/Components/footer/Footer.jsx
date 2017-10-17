@@ -15,7 +15,7 @@ const Footer = () => {
                         <p id='info' style={{ color: 'white' }}>Copyright@2017____TCNM_____PDF ONLINE</p>
                     </Col>
                     <Col md={4}>
-                        <Icon inverted color='blue' link size='big' name='facebook square' />
+                        <Icon link size='big' name='facebook square' />
                         <Icon link size='big' name='twitter square' />
                         <Icon link size='big' name='linkedin square' />
                         <Icon link size='big' name='github square' />

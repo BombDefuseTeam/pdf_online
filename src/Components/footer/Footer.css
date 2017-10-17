@@ -11,6 +11,10 @@
 	margin: 5px 5px;
 }
 
+i.icon.facebook.square,i.icon.twitter.square,i.icon.linkedin.square,i.icon.github.square,i.icon.google.plus.square,i.icon.pinterest.square {
+	color: white;
+}
+
 i.icon.facebook.square:hover {
 	color: #3B5998;
 }
@@ -21,6 +25,10 @@ i.icon.twitter.square:hover {
 
 i.icon.linkedin.square:hover {
 	color: #007bb6;
+}
+
+i.icon.github.square:hover {
+	color: rgb(102, 102, 102);
 }
 
 i.icon.google.plus.square:hover {
