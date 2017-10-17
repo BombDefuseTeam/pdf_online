@@ -1,0 +1,43 @@
+#info-content {
+	width: 70%;
+	margin: 0 auto;
+}
+
+#item-path {
+	width: 100%;
+}
+
+ol.breadcrumb {
+	margin-bottom: 0;
+}
+
+#item-image {
+	width: 100%;
+}
+
+#item-image-box, #item-info-box {
+	width: 50%;
+	padding: 10px 10px;
+}
+
+#item-content-box {
+	width: 100%;
+	padding: 10px 10px;
+}
+
+#item-image-box {
+	float: left;
+}
+
+#item-info-box {
+	float: right;
+}
+
+#button-box {
+	margin: 0 auto;
+	display: table;
+}
+
+.clear {
+	clear: both;
+}
