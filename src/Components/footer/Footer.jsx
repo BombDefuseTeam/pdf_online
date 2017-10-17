@@ -3,19 +3,19 @@ import { Navbar, Nav, Grid, Row, Col } from 'react-bootstrap';
 import { Icon } from 'semantic-ui-react';
 import './Footer.css';
 
-document.body.style.paddingBottom = '71px';
+
 
 const Footer = () => {
     return (
-        <Navbar id="footer">
+        <Navbar id="footer" inverse color='blue'>
             <Grid>
                 <Row>
                     <Col md={1}></Col>
                     <Col md={7}>
-                        <p id='info'>Copyright@2017____TCNM_____PDF ONLINE</p>
+                        <p id='info' style={{ color: 'white' }}>Copyright@2017____TCNM_____PDF ONLINE</p>
                     </Col>
                     <Col md={4}>
-                        <Icon link size='big' name='facebook square' />
+                        <Icon inverted color='blue' link size='big' name='facebook square' />
                         <Icon link size='big' name='twitter square' />
                         <Icon link size='big' name='linkedin square' />
                         <Icon link size='big' name='github square' />

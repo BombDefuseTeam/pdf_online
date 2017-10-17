@@ -47,7 +47,7 @@ class NavButton extends React.Component {
 
 
 
-const DumpCardComponent = () => {
+const DumpCardComponent = ({ header }) => {
     var showItems = [1, 2, 3, 4];
     const settingsLong = {
         dots: false,
@@ -84,9 +84,9 @@ const DumpCardComponent = () => {
 
     };
     return (
-        <Grid fluid={true} style={{ 'padding-left': '100px' }}>
+        <Grid fluid={true} className='listSingle'>
             <Row>
-                <h2>Test</h2>
+                <h2>{header}</h2>
             </Row>
             <Row style={{}} className='appearWhenLong'>
 
@@ -128,10 +128,10 @@ const DumpCardComponent = () => {
 const controllerListItemComponent = (WrappedComponent) =>
     class extends Component {
         render() {
-
+            const category = this.props.category;
             return (
 
-                <WrappedComponent />);
+                <WrappedComponent header={category} />);
         }
     };
 

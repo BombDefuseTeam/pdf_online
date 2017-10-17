@@ -2,9 +2,16 @@
     .appearWhenLong{
        display: none;
     }
+    .listSingle{
+        padding-left: 30px;
+    }
 }
 @media screen and (min-width: 480px){
     .appearWhenShort{
        display: none;
     }
+    .listSingle{
+        padding-left: 100px;
+    }
 }
+

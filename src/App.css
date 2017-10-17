@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -33,9 +33,15 @@
 }
 @media screen and (max-width: 484px) {
   .listItem{
-  padding-right: 0px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and(min-width:484px){
+  .listItem{
+    margin-bottom: 100px;
+   
   }
 }
 .Header{
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
