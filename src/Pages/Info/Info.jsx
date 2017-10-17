@@ -21,29 +21,34 @@ const Info = () => {
                     </Breadcrumb>
                 </div>
                 <div id="main-content">
-                    <div id="item-image-box">
-                        <Image id='item-image' src={item.image} responsive thumbnail />
-                    </div>
-                    <div id="item-info-box">
-                        <PageHeader>{item.name}</PageHeader>
-                        <ListGroup>
-                            <ListGroupItem header="Authors">{item.author}</ListGroupItem>
-                            <ListGroupItem header="Year">{item.year}</ListGroupItem>
-                            <ListGroupItem header="Genres">{item.genre}</ListGroupItem>
-                            <ListGroupItem header="Language">{item.lang}</ListGroupItem>
-                        </ListGroup>
-                        <div id="button-box">
-                            <ButtonToolbar>
-                                <Button bsStyle="success">Download</Button>
-                                <Button bsStyle="primary">Read online</Button>
-                            </ButtonToolbar>
+                    <div id="center-content">
+                        <div id="item-image-box">
+                            <Image id='item-image' src={item.image} responsive thumbnail />
                         </div>
+                        <div id="item-info-box">
+                            <PageHeader>{item.name}</PageHeader>
+                            <ListGroup>
+                                <ListGroupItem header="Authors">{item.author}</ListGroupItem>
+                                <ListGroupItem header="Year">{item.year}</ListGroupItem>
+                                <ListGroupItem header="Genres">{item.genre}</ListGroupItem>
+                                <ListGroupItem header="Language">{item.lang}</ListGroupItem>
+                            </ListGroup>
+                            <div id="button-box">
+                                <ButtonToolbar>
+                                    <Button bsStyle="success" href="#">Download</Button>
+                                    <Button bsStyle="primary" href="#">Read online</Button>
+                                </ButtonToolbar>
+                            </div>
+                        </div>
+                        <div className="clear"></div>
                     </div>
-                    <div className="clear"></div>
                     <div id="item-content-box">
                         <ListGroup>
                             <ListGroupItem header="Content">{item.content}</ListGroupItem>
                         </ListGroup>
+                    </div>
+                    <div id="item-comment">
+                        <Comment />
                     </div>
                 </div>
                 <div className="clear"></div>
@@ -52,6 +57,21 @@ const Info = () => {
         </div>
     );
 };
+
+// const control = WrappedComponent =>
+//     class extends Component {
+//         constructor(props) {
+//             super(props);
+//         }
+
+//         render() {
+//             return (
+//                 <WrappedComponent
+//                     Comment={this.props.Comment}
+//                 />
+//             );
+//         }
+//     };
 
 const item = {
     name: 'Book1',
@@ -63,5 +83,7 @@ const item = {
     image: image,
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget egestas metus. Nullam blandit leo lorem, vel euismod ligula hendrerit nec. Curabitur rhoncus quam urna, quis fringilla lacus dapibus blandit. Duis facilisis massa id urna convallis, a pulvinar justo pulvinar. Phasellus rutrum finibus enim, nec laoreet augue commodo quis.',
 };
+
+// const ControlledInfo = control(Info);
 
 export { Info };

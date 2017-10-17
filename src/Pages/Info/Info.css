@@ -3,7 +3,7 @@
 	margin: 0 auto;
 }
 
-#item-path {
+#item-path, #item-image, #center-content {
 	width: 100%;
 }
 
@@ -11,13 +11,14 @@ ol.breadcrumb {
 	margin-bottom: 0;
 }
 
-#item-image {
-	width: 100%;
+#center-content {
+	display: flex;
 }
 
 #item-image-box, #item-info-box {
 	width: 50%;
 	padding: 10px 10px;
+	margin: auto 0;
 }
 
 #item-content-box {
@@ -35,6 +36,12 @@ ol.breadcrumb {
 
 #button-box {
 	margin: 0 auto;
+	display: table;
+}
+
+#item-comment {
+	width: 100%;
+	padding: 10px 10px;
 	display: table;
 }
 
