@@ -42,8 +42,8 @@ export class SearchBox extends Component {
 
         return (
             <Grid>
-                <Grid.Column width={8}>
-                    <Search
+                <Grid.Column width={16}>
+                    <Search style={{ width: '100%' }}
                         loading={isLoading}
                         onResultSelect={this.handleResultSelect}
                         onSearchChange={this.handleSearchChange}

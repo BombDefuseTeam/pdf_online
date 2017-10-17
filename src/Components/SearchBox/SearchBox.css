@@ -8,4 +8,6 @@
     width: auto;
     margin: 7px;
 }
-
+.search> .input{
+    width: 100%;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Button, Grid, Row, Col } from 'react-bootstrap';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Input } from 'semantic-ui-react';
 import './Header.css';
 import logo from './pics/logo.png';
 import { SearchBox } from '../SearchBox';
@@ -21,7 +21,7 @@ const Header = ({
 }) => {
     const bg = 'white', txt = 'red';
     return (
-        <Navbar id="navbar" fixedTop collapseOnSelect fluid onToggle={() => onCollapse()}>
+        <Navbar id="navbar" fixedTop collapseOnSelect fluid inverse onToggle={() => onCollapse()}>
             <Grid>
                 <Row>
                     <Col md={1}>
@@ -41,7 +41,8 @@ const Header = ({
                                 {
                                     Array(4).fill(null).map((btn, idx) => {
                                         return (
-                                            <Button
+                                            <li><a href="#">Button{idx}</a></li>
+                                            /* <Button
                                                 key={idx}
                                                 id={`button${idx}`}
                                                 href='#'
@@ -52,7 +53,7 @@ const Header = ({
                                                 style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
                                             >
                                                 Button{idx}
-                                            </Button>
+                                            </Button> */
                                         )
                                     })
                                 }
@@ -60,7 +61,9 @@ const Header = ({
                         </Col>
                         <Col md={4}>
                             <Nav>
+
                                 <SearchBox></SearchBox>
+
                             </Nav>
                         </Col>
                         <Col md={1}>
