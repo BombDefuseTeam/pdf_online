@@ -15,18 +15,15 @@ const handleError = (error) => {
 }
 
 const Header = ({
-    rw,
-    wr,
     onCollapse
 }) => {
-    const bg = 'white', txt = 'red';
     return (
-        <Navbar id="navbar" fixedTop collapseOnSelect fluid onToggle={() => onCollapse()}>
+        <Navbar id="navbar" fixedTop collapseOnSelect inverse fluid onToggle={() => onCollapse()}>
             <Grid>
                 <Row>
                     <Col md={1}>
                         <Navbar.Header>
-                            <Nav onClick={onCollapse}>
+                            <Nav>
                                 <a href="#" id='logo-link'>
                                     <img id='logo' src={logo} alt='logo' />
                                 </a>
@@ -36,23 +33,12 @@ const Header = ({
                     </Col>
 
                     <Navbar.Collapse>
-                        <Col md={6}>
+                        <Col md={5}>
                             <Nav>
                                 {
                                     Array(4).fill(null).map((btn, idx) => {
                                         return (
-                                            <Button
-                                                key={idx}
-                                                id={`button${idx}`}
-                                                href='#'
-                                                onMouseEnter={() => rw(`button${idx}`)}
-                                                onMouseLeave={() => wr(`button${idx}`)}
-                                                onMouseDown={() => rw(`button${idx}`, 1)}
-                                                onMouseUp={() => rw(`button${idx}`)}
-                                                style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
-                                            >
-                                                Button{idx}
-                                            </Button>
+                                            <li><a href="#">Button{idx}</a></li>
                                         )
                                     })
                                 }
@@ -60,38 +46,22 @@ const Header = ({
                         </Col>
                         <Col md={4}>
                             <Nav>
-                                <SearchBox></SearchBox>
+                                <li><SearchBox></SearchBox></li>
                             </Nav>
                         </Col>
-                        <Col md={1}>
+                        <Col md={2}>
                             <Nav>
-                                {/* <Button
-                                    id='login'
-                                    href='#'
-                                    onMouseEnter={() => rw('login')}
-                                    onMouseLeave={() => wr('login')}
-                                    onMouseDown={() => rw('login', 1)}
-                                    onMouseUp={() => rw('login')}
-                                    style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
-                                >
-                                    Login
-                                </Button> */}
                                 <FacebookProvider appId="123456789">
                                     <Login
                                         scope="email"
                                         onResponse={this.handleResponse}
                                         onError={this.handleError}
                                     >
-                                        <Button
-                                            id='login'
-                                            onMouseEnter={() => rw('login')}
-                                            onMouseLeave={() => wr('login')}
-                                            onMouseDown={() => rw('login', 1)}
-                                            onMouseUp={() => rw('login')}
-                                            style={{ backgroundColor: bg, color: txt, borderColor: 'white' }}
-                                        >
-                                            <Icon id='faceicon' style={{ color: '#3B5998' }} name='facebook' />Login
-                                        </Button>
+                                        <li>
+                                            <a href="#">
+                                                <span><Icon id='faceicon' style={{ color: '#3B5998' }} name='facebook' />Login</span>
+                                            </a>
+                                        </li>
                                     </Login>
                                 </FacebookProvider>
                             </Nav>
@@ -109,31 +79,14 @@ const control = WrappedComponent =>
             super(props);
         }
 
-        rw = (id, border = null) => {
-            if (id == 'login') document.getElementById('faceicon').style.color = 'white';
-            document.getElementById(id).style.backgroundColor = 'red';
-            document.getElementById(id).style.color = 'white';
-            border
-                ? document.getElementById(id).style.borderColor = 'grey'
-                : document.getElementById(id).style.borderColor = 'white';
-        }
-
-        wr = id => {
-            if (id == 'login') document.getElementById('faceicon').style.color = '#3B5998';
-            document.getElementById(id).style.backgroundColor = 'white';
-            document.getElementById(id).style.color = 'red';
-        }
-
         onCollapse = () => {
             const navbar = document.getElementById("navbar");
-            document.body.style.paddingTop = `${navbar.clientHeight > 100 ? 96 : 234}px`;
+            document.body.style.paddingTop = `${navbar.clientHeight > 150 ? 92 : 373}px`;
         }
 
         render() {
             return (
                 <WrappedComponent
-                    rw={this.rw}
-                    wr={this.wr}
                     onCollapse={this.onCollapse}
                 />
             )
@@ -144,15 +97,25 @@ const ControlledHeader = control(Header);
 
 if (matchMedia) {
     const mq = window.matchMedia("(max-width : 768px)");
+    const mq2 = window.matchMedia("(max-width : 992px)");
     mq.addListener(WidthChange);
     WidthChange(mq);
+    mq2.addListener(WidthChange2);
+    WidthChange2(mq2);
 }
 
 function WidthChange(mq) {
     const navbar = document.getElementById("navbar");
     mq.matches
-        ? (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 20}px`)) || (document.body.style.paddingTop = `96px`)
-        : (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 20}px`)) || (document.body.style.paddingTop = `70px`)
+        ? (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 1}px`)) || (document.body.style.paddingTop = `92px`)
+        : (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 1}px`)) || (document.body.style.paddingTop = `61px`)
+}
+
+function WidthChange2(mq) {
+    const navbar = document.getElementById("navbar");
+    mq.matches
+        ? (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 1}px`)) || (document.body.style.paddingTop = `64px`)
+        : (navbar && (document.body.style.paddingTop = `${navbar.clientHeight + 1}px`)) || (document.body.style.paddingTop = `61px`)
 }
 
 export { Header, ControlledHeader };
