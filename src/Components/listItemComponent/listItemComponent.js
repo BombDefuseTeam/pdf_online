@@ -86,7 +86,7 @@ const DumpCardComponent = ({ header }) => {
     return (
         <Grid fluid={true} className='listSingle'>
             <Row>
-                <h1><a src='#'>{header}</a></h1>
+                <h1 className='title'><a src='#'>{header}</a></h1>
             </Row>
             <Row style={{}} className='appearWhenLong'>
 
