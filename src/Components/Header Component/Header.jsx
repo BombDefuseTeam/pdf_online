@@ -51,7 +51,7 @@ const Header = ({
                         </Col>
                         <Col md={2}>
                             <Nav>
-                                <FacebookProvider appId="123456789">
+                                <FacebookProvider appId="307311049732291">
                                     <Login
                                         scope="email"
                                         onResponse={this.handleResponse}
