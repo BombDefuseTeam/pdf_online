@@ -4,7 +4,7 @@ import './Info.css';
 
 import { Comment } from '../../Components/Comment';
 import { ControlledHeader } from '../../Components/Header Component';
-import { Footer } from '../../Components/Footer/Footer';
+import { Footer } from '../../Components/Footer';
 
 import image from './book1.jpg';
 
@@ -47,9 +47,9 @@ const Info = () => {
                             <ListGroupItem header="Content">{item.content}</ListGroupItem>
                         </ListGroup>
                     </div>
-                    <div id="item-comment">
-                        <Comment />
-                    </div>
+                </div>
+                <div id="item-comment">
+                    <Comment />
                 </div>
                 <div className="clear"></div>
             </div>
@@ -57,21 +57,6 @@ const Info = () => {
         </div>
     );
 };
-
-// const control = WrappedComponent =>
-//     class extends Component {
-//         constructor(props) {
-//             super(props);
-//         }
-
-//         render() {
-//             return (
-//                 <WrappedComponent
-//                     Comment={this.props.Comment}
-//                 />
-//             );
-//         }
-//     };
 
 const item = {
     name: 'Book1',
@@ -83,7 +68,5 @@ const item = {
     image: image,
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget egestas metus. Nullam blandit leo lorem, vel euismod ligula hendrerit nec. Curabitur rhoncus quam urna, quis fringilla lacus dapibus blandit. Duis facilisis massa id urna convallis, a pulvinar justo pulvinar. Phasellus rutrum finibus enim, nec laoreet augue commodo quis.',
 };
-
-// const ControlledInfo = control(Info);
 
 export { Info };
