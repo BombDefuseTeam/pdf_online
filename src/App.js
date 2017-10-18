@@ -18,21 +18,21 @@ export default class App extends Component {
     render() {
         return (
             <div >
-                <div className='Header' >
+                {/* <div className='Header' >
                     <ControlledHeader />
                 </div>
                 <div>
                     <Slider />
                 </div>
-                <div className="App">
-                    {/* <ul>
+                <div className="App"> */}
+                {/* <ul>
                         <li><a href="/searchbox">Search Box</a></li>
                         <li><a href="/searchresult">Search Result</a></li>
                         <li><a href="/comment">Comment</a></li>
                         <li><a href="/pdf">PDF</a></li>
                     </ul>
                     <br /> */}
-                    <div className='listItem'>
+                {/* <div className='listItem'>
                         <SmartListItemComponent category={'Top rate'} />
                         <SmartListItemComponent category={'Top rate1'} />
                         <SmartListItemComponent category={'Top rate2'} />
@@ -43,7 +43,7 @@ export default class App extends Component {
 
                 <div style={{ position: 'relative', 'margin-top': '60px' }} >
                     <Footer />
-                </div>
+                </div> */}
             </div>
         );
     }
