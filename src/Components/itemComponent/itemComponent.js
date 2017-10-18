@@ -6,11 +6,11 @@ const DumpItemCardComponent = ({ onMouseLeave, onMouseEnter }) => {
     const CardItem = (
 
         <Card style={{ 'text-decoration': 'none' }} link >
-            <Image src={require('../images/unnamed.jpg')} />
-            <Card.Content>
+            <Image style={{ 'max-height': '250px' }} src={require('../images/unnamed.jpg')} />
+            <Card.Content style={{ 'max-height': '100px' }}>
                 <Card.Header>
                     Songoku
-                            </Card.Header>
+                </Card.Header>
                 <Card.Meta>
                     Join in 2016
                             </Card.Meta>

@@ -1,0 +1,13 @@
+ .menu{
+    height: 100px;
+}
+.menu >a.item{
+    width: 20%;
+  
+    
+}
+.item {
+    display: block !important;
+    padding-top: 45px !important;
+    text-align: center;
+}
