@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import { Container } from 'semantic-ui-react';
 import './PDF.css';
 
-const PDF = () =>  { return (
-    <Container textAlign style={{maxWidth:'1000px'}}>
-        <object data="./Clean_Code.pdf#page=5" type="application/pdf" width="100%" height="700px">
-            <iframe src="./Clean_Code.pdf#page=5" style={{ border: 'none' }} width="100%" height="700px">
-      This browser does not support PDFs. Please download the PDF to view it: <a href="./Clean_Code.pdf#page=5">Download PDF</a>
-            </iframe>
-        </object>
-    </Container>
-);};
+const PDF = () => {
+    return (
+        <Container textAlign style={{ maxWidth: '1000px' }}>
+            <object data="./Clean_Code.pdf#page=5" type="application/pdf" width="100%" height="700px">
+                <iframe src="./Clean_Code.pdf#page=5" style={{ border: 'none' }} width="100%" height="700px">
+                    This browser does not support PDFs. Please download the PDF to view it: <a href="./Clean_Code.pdf#page=5">Download PDF</a>
+                </iframe>
+            </object>
+        </Container>
+    );
+};
 
 export { PDF };

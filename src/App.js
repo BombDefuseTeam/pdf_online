@@ -12,14 +12,14 @@ import { Footer } from './Components/Footer';
 import { SmartItemComponent } from './Components/itemComponent/itemComponent';
 import { SmartListItemComponent } from './Components/listItemComponent/listItemComponent';
 import { Button } from 'react-bootstrap';
-import { PageReading } from './PageReading';
+import { PageReading } from './Pages/PageReading';
 import logo from './logo.svg';
 
 export default class App extends Component {
     render() {
         return (
             <div>
-                <PageReading/>
+                <PageReading />
             </div>
         );
     }

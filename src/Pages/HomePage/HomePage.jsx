@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { SearchBox } from '../Components/SearchBox';
-import { Slider } from '../Components/Slider Component';
-import { ControlledHeader } from '../Components/Header Component';
-import { Footer } from '../Components/Footer';
-import { SmartItemComponent } from '../Components/itemComponent/itemComponent';
-import { SmartListItemComponent } from '../Components/listItemComponent/listItemComponent';
+import { SearchBox } from '../../Components/SearchBox';
+import { Slider } from '../../Components/Slider Component';
+import { ControlledHeader } from '../../Components/Header Component';
+import { Footer } from '../../Components/Footer';
+import { SmartItemComponent } from '../../Components/itemComponent/itemComponent';
+import { SmartListItemComponent } from '../../Components/listItemComponent/listItemComponent';
 import { Button } from 'react-bootstrap';
 import './HomePage.css';
 
