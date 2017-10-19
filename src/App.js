@@ -14,13 +14,10 @@ import { SmartListItemComponent } from './Components/listItemComponent/listItemC
 import { Button } from 'react-bootstrap';
 import logo from './logo.svg';
 
-import { About } from './Pages/About';
-
 export default class App extends Component {
     render() {
         return (
             <div >
-                <About />
             </div>
         );
     }
