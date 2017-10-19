@@ -1,0 +1,30 @@
+.ui.selection.dropdown .menu.noscrolling {
+    overflow: hidden;
+    max-height: none;
+}
+  
+.ui.selection.dropdown .menu .buttons {
+    display: flex;
+    width: auto;
+    margin: 7px;
+}
+  
+#reading-item-box {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#reading-item-image-box {
+    float: left;
+    width: 30%;
+    padding: 10px 10px;
+    margin: auto 0;
+}
+
+#reading-item-info-box {
+    float: right;
+    width: 70%;
+    padding: 10px 10px;
+    margin: auto 0;
+}
