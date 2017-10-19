@@ -24,7 +24,7 @@ const Header = ({
                     <Col md={1}>
                         <Navbar.Header>
                             <Nav>
-                                <a href="#" id='logo-link'>
+                                <a href="/" id='logo-link'>
                                     <img id='logo' src={logo} alt='logo' />
                                 </a>
                                 <Navbar.Toggle />
@@ -36,9 +36,9 @@ const Header = ({
                         <Col md={5}>
                             <Nav>
                                 {
-                                    Array(4).fill(null).map((btn, idx) => {
+                                    ['Category', 'Category', 'Category', 'About us'].map((val, idx) => {
                                         return (
-                                            <li><a href="#">Button{idx}</a></li>
+                                            <li><a href={idx == 3 ? '/about' : '/category'}>{val}</a></li>
                                         )
                                     })
                                 }
@@ -98,10 +98,11 @@ const ControlledHeader = control(Header);
 if (matchMedia) {
     const mq = window.matchMedia("(max-width : 768px)");
     const mq2 = window.matchMedia("(max-width : 992px)");
-    mq2.addListener(WidthChange2);
-    WidthChange2(mq2);
     mq.addListener(WidthChange);
     WidthChange(mq);
+    mq2.addListener(WidthChange2);
+    WidthChange2(mq2);
+
 }
 
 function WidthChange(mq) {

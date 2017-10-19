@@ -8,7 +8,7 @@ import { PDF } from '../Components/PDF';
 
 import { Slider } from '../Components/Slider Component';
 import { ControlledHeader } from '../Components/Header Component';
-import { Footer } from '../Components/footer/Footer';
+import { Footer } from '../Components/Footer/Footer';
 import { SmartItemComponent } from '../Components/itemComponent/itemComponent';
 
 import { Button, Jumbotron, Row, Col } from 'react-bootstrap';

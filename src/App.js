@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 import { SearchResult } from './Components/SearchResult/SearchResult';
 import { SearchBox } from './Components/SearchBox';
 import { Comment } from './Components/Comment';
@@ -17,18 +16,10 @@ import { PaginationBasic } from './Components/Pagination/Pagination';
 import 'semantic-ui-css/semantic.min.css';
 import ItemCategories from './Page/ItemsCategories';
 
-
-import { HomePage } from './Pages/HomePage';
-import { About } from './Pages/About';
-import { Info } from './Pages/Info';
-import { PageReading } from './Pages/PageReading';
-
 export default class App extends Component {
-
     render() {
         return (
-            <div>
-            </div>
+            <Main />
         );
     }
 }
