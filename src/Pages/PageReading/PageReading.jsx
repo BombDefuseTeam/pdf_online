@@ -29,17 +29,18 @@ export class PageReading extends Component {
                             </div>
                             <div style={{ clear: 'both' }}></div>
                         </div>
-                        <div>
-                            <PDF />
-                        </div>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <PDF />
+                    </Grid.Row>
+                    <Grid.Row>
+                        <CommentComponent />
                     </Grid.Row>
                 </Grid>
-                <div id='reading-item-comment-box'>
-                    <CommentComponent />
-                </div>
                 <div className='listItem'>
-                    <SmartListItemComponent category={'Sách cùng thể loại'} />
+                    <SmartListItemComponent category={'Same Category'} />
                 </div>
+
 
                 <Footer />
             </div >

@@ -13,7 +13,7 @@ import './HomePage.css';
 export class HomePage extends Component {
     render() {
         return (
-            <div >
+            <div  >
                 <div className='Header' >
                     <ControlledHeader />
                 </div>
