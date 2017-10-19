@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Breadcrumb, Image, PageHeader, ListGroup, ListGroupItem, ButtonToolbar, Button } from 'react-bootstrap';
 import './Info.css';
 
-import { Comment } from '../../Components/Comment';
+import { CommentComponent } from '../../Components/Comment';
 import { ControlledHeader } from '../../Components/Header Component';
 import { Footer } from '../../Components/Footer';
 
@@ -49,7 +49,7 @@ const Info = () => {
                     </div>
                 </div>
                 <div id="item-comment">
-                    <Comment />
+                    <CommentComponent />
                 </div>
                 <div className="clear"></div>
             </div>
