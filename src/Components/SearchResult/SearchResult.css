@@ -8,4 +8,7 @@
     width: auto;
     margin: 7px;
 }
-  
+.ui.container>.contentBook{
+    border: 1px solid gray;
+    padding:10px;
+}

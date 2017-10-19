@@ -1,0 +1,40 @@
+@media screen and (min-width: 768px){
+    .forShort{
+        display: none;
+    }
+    .menu{
+        height: 70px;
+    }
+    .menu >a.item{
+        width: 20% ;
+  
+    
+    }
+    .item {
+        display: block !important;
+        padding-top: 30px !important;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px){
+    .container.forLong{
+        display: none;
+    }
+    .forShort{
+        display: block;
+    }
+    .menu{
+        height: 100%;
+        border: none;
+        
+    }
+    .menu >a.item{
+        width: 100%;
+        
+        
+    }
+    div.left.tabular.menu{
+        border: none;
+    }
+  
+}

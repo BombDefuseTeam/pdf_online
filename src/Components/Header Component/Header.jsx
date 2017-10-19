@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Button, Grid, Row, Col } from 'react-bootstrap';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Input } from 'semantic-ui-react';
 import './Header.css';
 import logo from './pics/logo.png';
 import { SearchBox } from '../SearchBox';

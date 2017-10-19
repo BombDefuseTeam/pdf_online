@@ -8,6 +8,9 @@
     width: auto;
     margin: 7px;
 }
+.search> .input{
+    width: 100%;
+}
 
 .search > .input {
     width: 100%;
