@@ -98,10 +98,10 @@ const ControlledHeader = control(Header);
 if (matchMedia) {
     const mq = window.matchMedia("(max-width : 768px)");
     const mq2 = window.matchMedia("(max-width : 992px)");
-    mq.addListener(WidthChange);
-    WidthChange(mq);
     mq2.addListener(WidthChange2);
     WidthChange2(mq2);
+    mq.addListener(WidthChange);
+    WidthChange(mq);
 }
 
 function WidthChange(mq) {
