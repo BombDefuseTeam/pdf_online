@@ -10,6 +10,7 @@ import { Slider } from '../Components/Slider Component';
 import { ControlledHeader } from '../Components/Header Component';
 import { Footer } from '../Components/footer/Footer';
 import { SmartItemCardComponent } from '../Components/itemComponent/itemComponent';
+import { SmartItemItemComponent } from '../Components/itemComponent/itemItemComponent.js';
 
 import { Button, Jumbotron, Row, Col } from 'react-bootstrap';
 import { Container, Divider, Dropdown, Menu, Tab } from 'semantic-ui-react';
@@ -27,9 +28,26 @@ export default class ItemCategories extends Component {
                     {array.map(item => {
                         return (
 
-                            <Col lg={3} md={3} sm={6} >
+                            <Col lg={3} mdHidden smHidden xsHidden >
+
                                 <SmartItemCardComponent />
+
                             </Col>
+
+
+                        );
+                    })}
+                </Row>
+                <Row>
+                    {array.map(item => {
+                        return (
+
+                            <Col lgHidden md={12} sm={12} >
+
+                                <SearchResult />
+
+                            </Col>
+
 
                         );
                     })}
@@ -52,7 +70,12 @@ export default class ItemCategories extends Component {
         return (
             <div>
                 <ControlledHeader />
-                <Tab className='hello' menu={{ pointing: true }} panes={panes} />
+                <Container className='forLong'>
+                    <Tab className='hello' menu={{ pointing: true }} panes={panes} />
+                </Container>
+                <div className='forShort'>
+                    <Tab menu={{ fluid: true, vertical: true, tabular: 'left' }} panes={panes} />
+                </div>
                 <div style={{ position: 'relative', 'margin-top': '60px' }} >
                     <Footer />
                 </div>
