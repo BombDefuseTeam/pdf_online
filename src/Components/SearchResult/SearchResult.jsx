@@ -57,10 +57,10 @@ const SearchResult = () => {
                         <Image src={require('../images/unnamed.jpg')} size='medium' />
 
                     </Col>
-                    <Col lg={4} md={4} sm={4} xs={12}>
-                        <h3 style={{ margin: 0 }}><a href="#">The Complete Android N Developer Course</a></h3>
+                    <Col lg={6} md={6} sm={6} xs={12}>
+                        <h3 style={{ margin: 0 }}><a href="/info">The Complete Android N Developer Course</a></h3>
                         <Label as='a' color='yellow' content="Best Seller" size="tiny" tag />
-                        <p style={{ margin: 0 }}><a href="#"><em>Rob Percival • Web Developer And Teacher</em></a></p>
+                        <p style={{ margin: 0 }}><a href="/info"><em>Rob Percival • Web Developer And Teacher</em></a></p>
                         <p style={{ margin: 0, maxWidth: '550px' }}>
                             Learn Android App Development with Android 7 Nougat by building real apps including Uber, Whatsapp and Instagram!<br />
                             <Icon name="play circle" style={{ marginRight: '-10px', width: '100px' }}> 272 videos </Icon>
@@ -69,7 +69,7 @@ const SearchResult = () => {
                             <Icon name="cc" style={{ marginRight: '-10px', width: '100px' }}> English </Icon>
                         </p>
                     </Col>
-                    <Col lg={4} md={4} sm={4} xs={12}>
+                    <Col lg={2} md={2} sm={2} xs={12}>
                         <h3 style={{ display: 'inline', marginRight: '5px' }}>$12</h3>
                         <strike>$200</strike>
                         <br />

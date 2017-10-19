@@ -5,7 +5,7 @@ import './itemComponent.css';
 const DumpItemCardComponent = ({ onMouseLeave, onMouseEnter }) => {
     const CardItem = (
 
-        <Card style={{ 'text-decoration': 'none' }} link >
+        <Card style={{ 'text-decoration': 'none' }} link href='/info' >
             <Image style={{ 'max-height': '250px' }} src={require('../images/unnamed.jpg')} />
             <Card.Content style={{ 'max-height': '100px' }}>
                 <Card.Header>

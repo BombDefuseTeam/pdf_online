@@ -15,6 +15,7 @@ import { Container, Divider, Dropdown, Menu } from 'semantic-ui-react';
 import { PaginationBasic } from './Components/Pagination/Pagination';
 import 'semantic-ui-css/semantic.min.css';
 import ItemCategories from './Page/ItemsCategories';
+import SearchPage from './Page/SearchPage';
 
 export default class App extends Component {
     render() {

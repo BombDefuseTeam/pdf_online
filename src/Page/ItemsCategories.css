@@ -11,8 +11,8 @@
     
     }
     .item {
-        display: block !important;
-        padding-top: 30px !important;
+        /* display: block !important; */
+        /* padding-top: 30px !important; */
         text-align: center;
     }
 }

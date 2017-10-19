@@ -33,16 +33,16 @@ const Slider = () => {
 const list = [
     {
         src: img,
-        link: '#'
+        link: '/info'
     }, {
         src: img,
-        link: '#'
+        link: '/info'
     }, {
         src: img,
-        link: '#'
+        link: '/info'
     }, {
         src: img,
-        link: '#'
+        link: '/info'
     }
 ];
 

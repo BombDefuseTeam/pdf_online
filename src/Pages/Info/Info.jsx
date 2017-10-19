@@ -15,8 +15,8 @@ const Info = () => {
             <div id="info-content">
                 <div id="item-path">
                     <Breadcrumb>
-                        <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-                        <Breadcrumb.Item href="#">{item.category}</Breadcrumb.Item>
+                        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                        <Breadcrumb.Item href="/category">{item.category}</Breadcrumb.Item>
                         <Breadcrumb.Item active>{item.name}</Breadcrumb.Item>
                     </Breadcrumb>
                 </div>
@@ -36,7 +36,7 @@ const Info = () => {
                             <div id="button-box">
                                 <ButtonToolbar>
                                     <Button bsStyle="success" href="#">Download</Button>
-                                    <Button bsStyle="primary" href="#">Read online</Button>
+                                    <Button bsStyle="primary" href="/read">Read online</Button>
                                 </ButtonToolbar>
                             </div>
                         </div>
